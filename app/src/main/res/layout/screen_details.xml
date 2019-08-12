@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent">
+
+    <LinearLayout
+        android:id="@+id/ll_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:background="@color/colorRed"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="4"
+            android:text="@string/errorString"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x50sp"
+            android:padding="@dimen/x28sp"
+            android:textStyle="normal" />
+
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10dp"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"
+            android:text="@string/retry"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/tv_avg_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x50sp"
+            android:textStyle="bold"
+            tools:text="tempC" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60dp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28sp"
+            android:textStyle="normal"
+            tools:text="city" />
+
+
+    </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:visibility="invisible"
+            android:background="@color/colorWhite">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

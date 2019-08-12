@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="network_error">No network connection.</string>
+    <string name="errorString">Something went wrong at our end!</string>
+    <string name="retry">retry</string>
+    <string name="local">Local</string>
+    <string name="network">network</string>
+</resources>
